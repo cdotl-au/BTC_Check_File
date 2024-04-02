@@ -1,6 +1,5 @@
-You're absolutely right; 2,000,000 satoshis is indeed 0.02 BTC, not 0.2 BTC. Let me correct that in the document:
-
 BTC_Check_File
+
 (For Educational Use Only)
 
 Overview:
