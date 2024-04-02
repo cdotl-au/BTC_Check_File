@@ -54,7 +54,7 @@ def separate_rows(input_file, column_index, output_file, row_limit=None, ignore_
             print(rows_processed, row[1])
             
             
-input_file = "blockchair_bitcoin_addresses_and_balance_LATEST.tsv"
+input_file = "bitcoin_addresses_and_balance_LATEST.tsv"
 
 output_file = "wallets.txt"
 column_index = 0
