@@ -22,7 +22,7 @@ def write_log(log_message, file_name='log.txt'):
     with open(file_name, 'a') as file:
         file.write(full_message)
 
-    print(f"Log entry added: {full_message}")
+    #print(f"Log entry added: {full_message}")
 
 def IsFound(mnemonic):
 
