@@ -81,7 +81,7 @@ def myFound():
 
 ##########################################################################################
 
-#addresses_filename = "blockchair_bitcoin_addresses_and_balance_LATEST.tsv"
+#addresses_filename = "bitcoin_addresses_and_balance_LATEST.tsv"
 addresses_filename = "wallets.txt"
 
 winsound.PlaySound('success.wav', winsound.SND_FILENAME)
