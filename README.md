@@ -49,6 +49,10 @@ So with the above settings includes any wallets with >= 2,000,000 satoshi's (0.2
 
 wallets.txt
 -------------------------
-The sample wallets.txt is the top 1000 bitcoin wallets as at 2nd April 2024.
+The sample wallets.txt is the top 1000 bitcoin wallets as of the 2nd April 2024.
 
 More notes to follow.
+
+passphrases.txt
+-------------------------
+The sample passphrases.txt is the top 1000 lines from rockyou.txt
