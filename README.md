@@ -4,7 +4,7 @@
 
 Processes an input file of words or passphrases and converts them to bitcoin wallets addresses and checks for a match in the blockchain wallet text fie containing wallets with balances.
 
-This was coded for a brainwallet where I only had some of the words and using other code which I may upload later I could include the known words and X amount of valid words to append etc.
+This was coded for a brainwallet where I only had some of the words and using other code which I may upload later I could include the known words and X amount of valid words to include and test with.
 
 Steps:
 
