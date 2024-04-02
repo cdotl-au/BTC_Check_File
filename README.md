@@ -45,4 +45,8 @@ stop_value = 2000000
 
 So with the above settings includes any wallets with >= 2,000,000 satoshi's (0.2 BTC) in the file "wallets.txt" which is processed by BTC_Check_File.py up to a maximum rows specified by row_limit. 
 
+wallets.txt
+-------------------------
+The sample wallets.txt is the top 1000 bitcoin wallets as at 2nd April 2024.
+
 More notes to follow.
