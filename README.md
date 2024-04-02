@@ -16,6 +16,17 @@ Steps:
 
 The program writes to a log every 100 attempts so that you can trim the input file and restart if needed.
 
+BTC_Check_File
+------------------------
+
+Processes "passphrases.txt" converting each line to a bitcoin wallet address and check for a match in the frozen set which contains wallets with a balance.
+
+You can adjust the "passphrases.txt" file to anything you like as long as there an password/passphrase per line.
+
+If a match is found success.wav will play 10 times and a file called "win.txt" will be written out and the program will stop.  "win.txt" will have the mneumonic and the 5 bitcoin wallets that were derived and the the WIF uncompressed and compressed to use to import into your bitcoin wallet as well as the private key.
+
+You can test the whole process by grabbing a wallet output and putting in the wallets.txt file.
+
 TSV_Split
 ------------------------
 This takes the tab seperated wallets file [link to follow] and splits out column 1 into "wallets.txt" this is loaded by the BTC_Check_File.py into a frozen set for searching.
