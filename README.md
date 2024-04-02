@@ -13,7 +13,7 @@ Steps:
 2) Run: python TSV_Split.py
    This will split out just the wallet address to "wallets.txt"
 
-3) Run: python BTC_Check_File.txt
+3) Run: python BTC_Check_File.py
    This will process the password / passphrase file: "passphrases.txt"
 
 The program writes to a log every 100 attempts so that you can trim the input file and restart if needed.
