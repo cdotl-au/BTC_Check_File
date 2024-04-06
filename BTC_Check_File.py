@@ -102,39 +102,42 @@ iLines = 0
 replace_chars = ['_', '!', '*', '$']  #Characters to replace spaces with
 
 with open('passphrases.txt', 'r', encoding='utf-8', errors='replace') as file:
-
     for line in file:
-        original_line = line.strip()
+        try:
+            original_line = line.strip()
+            variants = [original_line]
 
-        variants = [original_line]
+            # Add lower, upper, and title case variants
+            for case_function in [str.lower, str.upper, str.title]:
+                case_variant = case_function(original_line)
+                if case_variant != original_line:
+                    variants.append(case_variant)
+    
+            # Variants without spaces and with space replaced by each character in replace_chars
+            for replace_char in [''] + replace_chars:  # Include empty string to remove spaces
+                replaced_line = original_line.replace(' ', replace_char)
+                if replaced_line != original_line:
+                    variants.append(replaced_line)
+    
+                    # Add lower, upper, and title case variants of the replaced line
+                    for case_function in [str.lower, str.upper, str.title]:
+                        case_variant = case_function(replaced_line)
+                        if case_variant not in variants:  # Avoid duplicates
+                            variants.append(case_variant)
+    
+            # Check each variant
+            for variant in variants:
+                iAttempts += 1
+                if IsFound(variant):
+                    myFound()
+                    break
+    
+            iLines += 1  # Only increment if no match was found
 
-        # Add lower, upper, and title case variants
-        for case_function in [str.lower, str.upper, str.title]:
-            case_variant = case_function(original_line)
-            if case_variant != original_line:
-                variants.append(case_variant)
-
-        # Variants without spaces and with space replaced by each character in replace_chars
-        for replace_char in [''] + replace_chars:  # Include empty string to remove spaces
-            replaced_line = original_line.replace(' ', replace_char)
-            if replaced_line != original_line:
-                variants.append(replaced_line)
-
-                # Add lower, upper, and title case variants of the replaced line
-                for case_function in [str.lower, str.upper, str.title]:
-                    case_variant = case_function(replaced_line)
-                    if case_variant not in variants:  # Avoid duplicates
-                        variants.append(case_variant)
-
-        # Check each variant
-        for variant in variants:
-            iAttempts += 1
-            if IsFound(variant):
-                myFound()
-                break
-
-        iLines += 1  # Only increment if no match was found
-
+        except Exception as e:
+            print(f"Error processing line: {e}")
+            continue
+        
 if bFound:
     print("Winner Winner Chicken Dinner!")
 else:
