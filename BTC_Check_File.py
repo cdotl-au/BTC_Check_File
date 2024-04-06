@@ -101,7 +101,8 @@ iLines = 0
 
 replace_chars = ['_', '!', '*', '$']  #Characters to replace spaces with
 
-with open('passphrases.txt', 'r') as file:
+with open('passphrases.txt', 'r', encoding='utf-8', errors='replace') as file:
+
     for line in file:
         original_line = line.strip()
 
