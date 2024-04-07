@@ -43,7 +43,7 @@ def IsFound(mnemonic):
     if iAttempts % 100 == 0:
         #print(iAttempts, btc_address, btc_addressc, btc_address3, btc_address4, btc_address5, mnemonic)
         
-        tmp = f"{iAttempts:,} {mnemonic}"
+        tmp = f"{iAttempts:,} {btc_address} {mnemonic}"
         print(tmp)
         write_log(tmp)
 
@@ -87,6 +87,7 @@ def myFound():
 
 ##########################################################################################
 
+#addresses_filename = "bitcoin_addresses_and_balance_LATEST.tsv"
 addresses_filename = "wallets.txt"
 
 winsound.PlaySound('success.wav', winsound.SND_FILENAME)
@@ -104,7 +105,7 @@ print(f'Length: {iTotalLines}')
 
 iLines = 0
 
-replace_chars = ['_', '!', '*', '$']  #Characters to replace spaces with
+replace_chars = ['!', '@', '#', '$', '-', '_']  #Characters to replace spaces with
 
 with open('passphrases.txt', 'r', encoding='utf-8', errors='replace') as file:
     for line in file:
