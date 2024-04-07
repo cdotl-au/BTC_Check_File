@@ -62,14 +62,21 @@ def IsFound(mnemonic):
 
         #print(f"Not Found {btc_address} {btc_addressc}")
         return False
-
+        
 def Test(mnemonic):
     private_key = sha256(mnemonic)
+
     wallet = Wallet(private_key)
-    print(f"Bitcoin Address: {wallet.address.mainnet.pubaddr1}")
-    print(f"Bitcoin Address Compressed: {wallet.address.mainnet.pubaddr1c}")
-    print(f"Private Key WIF: {wallet.key.mainnet.wif}")
-    print(f"Private Key WIF Compressed: {wallet.key.mainnet.wifc}")
+    #print(wallet)
+
+    btc_address = wallet.address.mainnet.pubaddr1
+    btc_addressc = wallet.address.mainnet.pubaddr1c
+    btc_address3 = wallet.address.mainnet.pubaddr3
+    btc_address4 = wallet.address.mainnet.pubaddrbc1_P2WPKH
+    btc_address5 = wallet.address.mainnet.pubaddrbc1_P2WSH
+    
+    print(btc_address, btc_addressc, btc_address3, btc_address4, btc_address5, mnemonic)
+    
     return
 
 def myFound():
