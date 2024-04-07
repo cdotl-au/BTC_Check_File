@@ -1,13 +1,12 @@
 import winsound
 import time
+import datetime
 
 from bitcoin import sha256, privtopub, pubtoaddr
 from bitcoinaddress import Wallet
 
 iAttempts = 0
 bFound = False
-
-import datetime
 
 def write_log(log_message, file_name='log.txt'):
 
