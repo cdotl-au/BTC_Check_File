@@ -17,7 +17,7 @@ def separate_column(input_file, column_index, output_file, row_limit=None, ignor
             column_value = row[column_index].rstrip('\r\n')
 
             if stop_value is not None and float(row[1]) < stop_value:
-                print(f"Stopping program because column 1 exceeds {stop_value}")
+                print(f"Stopping program because column 1 below {stop_value}")
                 return
                 
             if rows_processed == 0:
@@ -45,7 +45,7 @@ def separate_rows(input_file, column_index, output_file, row_limit=None, ignore_
             column_value = row[column_index].rstrip('\r\n')
 
             if stop_value is not None and float(row[1]) < stop_value:
-                print(f"Stopping program because column 1 exceeds {stop_value}")
+                print(f"Stopping program because column 1 below {stop_value}")
                 return
                 
             f_output.write(column_value + "\n")
@@ -54,7 +54,7 @@ def separate_rows(input_file, column_index, output_file, row_limit=None, ignore_
             print(rows_processed, row[1])
             
             
-input_file = "bitcoin_addresses_and_balance_LATEST.tsv"
+input_file = "bitcoin_addresses_and_balance.tsv"
 
 output_file = "wallets.txt"
 column_index = 0
@@ -64,4 +64,3 @@ stop_value = 2000000
 
 separate_rows(input_file, column_index, output_file, row_limit, ignore_first_row, stop_value)
 #separate_rows(input_file, column_index, output_file, row_limit, ignore_first_row)
-
