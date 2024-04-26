@@ -41,3 +41,10 @@ This program processes a file containing words or passphrases and transforms the
 - `wallets.txt`: A sample file containing the top 1000 Bitcoin wallets as of April 2nd, 2024.
 - `passphrases.txt`: A sample file with the top 1000 lines from `rockyou.txt`.
 
+# Disclaimer
+
+The tools and scripts provided in this repository are released for educational and research purposes only. The author or contributors are not responsible for any misuse or damage resulting from the use or misuse of the software. It is the end user’s responsibility to obey all applicable local, state, and federal laws.
+
+The intent of sharing this code is to foster understanding and knowledge about cryptographic security practices and is not intended to enable illegal activities. Using this software to engage in any activity that violates the law, including but not limited to unauthorized access to digital wallets, is strictly prohibited.
+
+By downloading or using this software, you agree that you are solely responsible for any legal implications or repercussions that may arise from such actions. The authors assume no liability and are not responsible for any misuse or damage caused by this program.
