@@ -1,6 +1,6 @@
 # BTC_Check_File
 
-(For Educational Use Only)
+![OpenRedirex](https://github.com/cdotl-au/BTC_Check_File/blob/main/Screenshot.PNG?raw=true)
 
 # Overview:
 This program processes a file containing words or passphrases and transforms them into Bitcoin wallet addresses. It then compares these addresses against a blockchain wallet file with existing balances to identify any matches. Primarily, it's designed for recovering brainwallets when only partial information is available. Additional scripts can be used in conjunction with this tool to refine the recovery process.
